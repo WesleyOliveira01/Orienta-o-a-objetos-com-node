@@ -2,7 +2,25 @@ import Admin from "./Admin.js";
 import Docente from "./Docente.js";
 import User from "./User.js" ;
 
-const NovoUsuario = new User("Wesley","teste@teste","27-12-2001")
+class usuario{
+    #nome
+    #email
+    constructor(nome,email){
+        this.#nome = nome
+        this.#email = email
+    }
 
-console.log(NovoUsuario.exibirInfos());
+    
+    get nome(){
+        return this.#nome
+    }
+    set nome(value){
+        return this.#nome = value
+    }
+}
 
+const user = new usuario("wesley","m@m")
+
+user.nome = "wesley editado"
+
+console.log(user.nome)
